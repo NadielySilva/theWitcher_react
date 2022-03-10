@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
   text-transform: uppercase;
+  text-decoration: none;
   color: white;
   margin:0;
   padding:0;
@@ -28,16 +29,24 @@ header{
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  margin-bottom: 2.5vh;
 }
 
 ul{
   width: 50vw;
   height: 10vh;
   display: flex;
-  flexdirections: row;
+  flex-direction: row;
   align-items: center;
   justify-content: space-around;
   margin-top: 2.5vh;
+}
+
+a{
+  cursor: pointer;
+  &:hover{
+    text-weight: 700;
+  }
 }
 
 h2{
@@ -59,22 +68,23 @@ button{
   height: 6vh;
   position: relative;
   top: 25vh;
-  right: 16.5vw;
+  right: 15.5vw;
   margin: 0.5em 1em;
   padding: 0.25em 1em;
   border-radius: 3px;
   border: none;
   background: #bc131f;
+  cursor: pointer;
 }
 
 footer{
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
-  font-size: 0.65em;
+  font-size: 0.5em;
   width: 35vw;
   height: 5vh;
   position: relative;
-  top:5vh;
+  top:2vh;
   left: 1vw;
 }
 `
@@ -100,7 +110,7 @@ width: 3vw;
 height: auto;
 `
 const MyWitcherImage = styled.img`
-width: 33vw;
+width: 31.35vw;
 height: auto;
 position: relative;
 top: 4.5vh;
@@ -110,8 +120,8 @@ const MyShowNameImage = styled.img`
 width: 22vw;
 height: auto;
 position: relative;
-left: 3vw;
-bottom: 25vh;
+left: 3.5vw;
+bottom: 24vh;
 `
 
 export default class App extends Component{
@@ -130,10 +140,10 @@ export default class App extends Component{
           </Logo>
           <nav>
             <ul>
-              <li>Universo</li>
-              <li>Atores</li>
-              <li>Temporadas</li>
-              <li>Comunidades</li>
+              <li><a href="#">Universo</a></li>
+              <li><a href="#">Atores</a></li>
+              <li><a href="#">Temporadas</a></li>
+              <li><a href="#">Comunidades</a></li>
             </ul>
           </nav>
         </header>
